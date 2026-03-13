@@ -1,0 +1,71 @@
+body
+{
+    background-color: lightblue;
+    margin: 0;
+    padding: 0;
+}
+
+.to-do
+{
+    width: 400px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.heading
+{
+    border-radius: 8px;
+    color: brown;
+}
+.task
+{
+    margin:20px 0;
+}
+#task
+{
+    width: 65%;
+    padding: 8px;
+}
+#add
+{
+    padding: 8px 12px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+#clear
+{
+    margin-bottom: 15px;
+    padding: 6px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+ul
+{
+    list-style: none;
+    padding: 0;
+}
+li
+{
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+li span
+{
+    flex:1;
+    margin-left: 10px;
+}
+li button
+{
+    padding: 5px 8px;
+    background-color: #444;
+    color: white;
+    border: none;
+    cursor: pointer;
+
+}

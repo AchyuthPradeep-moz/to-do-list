@@ -1,6 +1,6 @@
 var tasks=[];
 var id=1;
-Window.onload=function()
+windowndow.onload=function()
 {
     const savedTasks=localStorage.getItem("tasks")
     if(savedTasks)
