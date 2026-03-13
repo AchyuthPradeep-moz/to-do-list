@@ -1,5 +1,15 @@
 var tasks=[];
 var id=1;
+Window.onload=function()
+{
+    const savedTasks=localStorage.getItem("tasks")
+    if(savedTasks)
+    {
+        tasks=JSON.parse(savedTasks);
+        id=tasks.length+1;
+        display();
+    }
+}
 document.getElementById("add").addEventListener("click",addTask);
 function addTask()
 {
@@ -14,7 +24,6 @@ function addTask()
     };
     tasks.push(task);
     id++;
-    input.value="";
     saveTasks();
     display();
 }
@@ -38,14 +47,21 @@ function display()
         del.addEventListener("click",function(){deleteTask(tasksid)});
         li.appendChild(checkbox);
         li.appendChild(span);
-        li.append(del);
+        li.appendChild(del);
         list.appendChild(li);
     }
 
 }
 function toggleTask(tasksid)
 {
-    tasksid.completed=!tasksid.completed
+    for(var i=0;i<tasks.length;i++)
+    {
+        if(tasks[i].id==tasksid)
+        {
+            tasks[i].completed=!tasks[i].completed;
+        }
+    }
+    
     saveTasks();
     display();
 }
